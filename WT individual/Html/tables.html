@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="width=device-width,intial-scale=1.0">
+    <title>TABLES</title>
+</head>
+
+<body>
+
+    <h1>TABLES IN HTML</h1>
+    <hr><br>
+
+
+    <table border=""> <!--Creating a Table using table Tag -->
+        <!--border tag used for bordering the table" -->
+
+        <caption style="background-color: coral;">Data Entry</caption>
+        <!--caption tag used for giving title to the table-->
+        <colgroup> <!--colgroup tag used for defining a group of columns within a Table-->
+            <col span="2" style="background-color: cadetblue;">
+            <!--col tag used for defining common characterstics for columns in the table-->
+            <col span="1" style="background-color: aqua;">
+            <!--span tag is used for selecting number of cells for which changes will be applied -->
+
+        </colgroup>
+
+
+        <thead style="background-color: yellow;"> <!--thead defines the Header of the table-->
+            <tr> <!--tr = Table Row used for creating a row inn the table-->
+                <th>Sr.NO</th> <!--th = Table Header used for bold effect -->
+                <th>NAME</th>
+                <th>AGE</th>
+            </tr>
+        </thead>
+
+        <tbody> <!--tbody consist of the rows in the table defining a body for the table-->
+
+            <tr>
+                <td>1</td> <!--td = Table Data used for inserting data into the rows -->
+                <td>UTKARSH</td>
+                <td>20</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>KALASH</td>
+                <td>19</td>
+            </tr>
+        </tbody>
+
+        <tfoot style="background-color: burlywood;"> <!--Defines a set of rows summarizing the columns of a table-->
+            <tr>
+                <th rowspan="4">RESULT</th>
+                <th rowspan="4" colspan="2">PASSED</th>
+                <!--colspan Tag is used to define the COLUMN SPACE for data 
+                                                         here we have used PASSED as a data and we are defining it to take space of 2 cells   -->
+            </tr>
+            <!-- rowspan Tag defines the ROW SPACES -->
+
+        </tfoot>
+
+    </table>
+
+</body>
+
+</html>

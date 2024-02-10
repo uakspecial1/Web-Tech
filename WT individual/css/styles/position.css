@@ -1,0 +1,158 @@
+/* position property specifies the type of positioning method used for an element 
+
+        static 
+        relative : - contains position:TOP/LEFT/RIGHT AND BOTTOM
+                        specifies the position from top,left,right,bottom
+
+                        EX:- top = "50px"  // spcifies 50px away from top 
+                             top = "-50px" // spcifies 50px away from bottom
+
+        absolute : - When set to absolute position then it removes from the normal flow of HTML and will float randomly
+        fixed : - It will fix the position or lock the position that is defined to it 
+        sticky
+
+
+        Bydefault the positioning is set to STATIC
+
+
+
+/// Z-Index : - Decides which element will come on top of another element
+Bydefault Childern class will cover parent class  
+
+If you want to change the Z-Index of an element then simply write z-index:1; for that element 
+If want to change again then simply write Higher z-index for that element 
+
+
+
+*/
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ede0d4;
+}
+header{
+    background-color: #9c6644;
+    padding: 10px;
+    text-align: center;
+}
+nav{
+    background-color: #d4e09b;
+}
+
+
+ul{
+    padding: 10px;
+    text-align: end;
+
+}
+li{
+    display: inline-block;
+    padding: 5px;
+    margin-top: -25px;
+   
+}
+li:hover{
+    text-transform: uppercase;
+    text-decoration: bold;
+    background-color: #f19c79;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* RELATIVE POSITIONING */
+
+/* Relative of relative is parent */
+
+.container{
+    width: 300px;
+    height: 900px;
+    background-color: cyan;
+    margin: 350px;
+   
+}
+
+.red{
+    position:relative;
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    margin: 0px; 
+    bottom: 0px;
+    left: 400px;
+}
+.green{
+    background-color: green;
+    width: 250px;
+    height: 250px;
+    position: fixed;                             /*green box is fixed it will not move*/
+    bottom: 50px; right: 50px;
+   
+}
+
+/* ABSOLUTE POSITIONING */
+
+/* absolute elements will always search for if their parent is relative or not. If yes then they will act as relative,
+   If not then HTML will be consider as Root
+
+            for ex:- 
+
+                        .container{
+
+                            position : relative;             // Parent class of blue having relative position
+
+                        }
+
+                        .blue{
+                            position:absolute;               // Here blue class has absolte position so it will look for its parent class 
+                                                                if its parent class is relative then blue class will also aquire relative position
+                        }
+
+
+*/
+
+
+
+
+.blue{
+    background-color: blue;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left:0px;                                     /*left with relative to HTML*/
+    top: 200px;                                     
+}
+
+
+/* Sticky sticks to the parent, If parent is out of view so does sticky */
+.pink{
+    background-color: pink;
+    width: 250px;
+    height: 250px;
+    position:sticky;
+    top:250px;
+
+}
+
+.brown{
+    background-color: brown;
+    width: 250px;
+    height: 250px;
+    position:fixed;
+    top:450px;
+    z-index: 5;
+}
+.yellow{
+    background-color: yellow;
+    width: 250px;
+    height: 250px;
+    position:fixed;
+    top:550px;
+    z-index:1;
+}

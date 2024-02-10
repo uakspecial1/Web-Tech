@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+*{
+    padding: 0px;
+    margin: 5px;                     /*for covering full space*/
+}
+
+body{
+    background-color: #d8e2dc;
+                       
+}
+header{
+    background-color: #ffe5d9;
+    padding: 50px;
+    text-decoration: underline;
+    text-decoration-style:solid;
+    text-decoration-color: brown;
+    font-family:'Honk', system-ui;;
+    font-size: medium;
+    
+}
+
+main{
+    background-color:#ffcad4 ;
+    padding: 10px;
+}
+
+.indent{
+    text-indent: 20px;
+
+
+}
+
+.one:hover{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #9d8189;
+    padding: 10px;
+}
+.two:hover{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #9d8189;
+    padding: 10px;
+}
+.IMG{
+    width: 55%; 
+    border-style: dashed;
+    border-width: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+

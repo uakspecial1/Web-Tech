@@ -1,0 +1,15 @@
+*{                      /*Universal Selector*/        
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;    /* The size of box will be of the size of content also can be of the size of border padding or margin */
+}
+body{
+    background-color: #606C38  ;
+}
+.div{
+    width: 50px;
+    height: 10px;
+    border: 10px solid brown;
+    padding: 20px 5px 20px 30px;  /*works in Circular */
+    margin: 50px;  /*Seperating padding and border from parent [here i.e body]*/
+}

@@ -1,0 +1,72 @@
+header{
+    border: 5px solid cadetblue ;            /*Defining syntax of border attribute 
+                                                  width-type-color
+                                                  3Types of Borders :- 
+                                                      1.Dashed 2.Dotted 3.Solid                         */
+    width: 100vw;
+
+    /* vw stands for View Width it represents the display width of screen 
+       For 100vw it will take entire screen 
+       For 50vw it will  minimize 
+       
+       vh is View Height representing Height
+       
+       
+       
+       */
+
+
+
+
+}
+
+
+/* px stands for css pixels which are depends on DPR  */
+
+main{
+    border: 20px dashed brown;
+    width: 50%;                          /*main is a child of parent body 
+                                            Its taking 50% of body */
+  
+}
+
+
+/* % is relative unit that is altered 
+   1.vw and vh are absolute unit and absolute units cant be altered
+   2.px is also absolute 
+   3.em is relative unit             // em is a unit [1em = 16px] its relative to parent i.e when 
+                                        Bydefault size of main[2em] is changed then em in its child will also change
+                                        for ex : - main{
+                                                    font size:2em;     //main is parent of header with size 2em already so it will make its child double the size
+                                        
+                                                   header{
+                                                    font size:2em;      //header will assume its size as 2em bydefault and bcoz its em it will check its parent
+                                                    }
+                                                    
+                                              If px is used then the size will remain as selected pixel size      
+   
+ 4.rem is also relative        // using em thers problem of increasing the size by double every time when em checks its parent to avoid this we use rem
+ [rem stand for root em so rem will work relative to root]
+     Bydefault root=1em
+ Every html has its root as html 
+   
+   
+*/
+
+
+
+
+
+section{
+    border: 10px dotted lime;         /*section is child of main which will take 50% of main*/
+    border-radius:10px ;
+    width: 50%;
+}
+#one{
+    width: 80vw;
+    border: 5px solid rgb(237, 157, 173);             /*Even though width of main is 50% which is the parent of one 
+                                                          If child has width defined in vd or height in vh then it will 
+                                                          be shown compulsorily
+                                                                                                                    */
+
+}

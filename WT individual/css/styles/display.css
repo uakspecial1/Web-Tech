@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Honk&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ 
+}
+
+body {
+    background-color: #f4a261;
+}
+
+header {
+    background-color: #2a9d8f;
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+}
+
+/* ul{
+    list-style: square;                        // Helps in styling Unordered list symbols
+} */
+
+ul{
+    
+        text-align: end;                              /* end to keep the items in right side */
+        padding: 10px;
+        background-color: rgb(170, 81, 108);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        cursor: pointer;                                     /*cursor pointer is used to change the pointer style*/
+}
+
+li{
+    color:black;
+    display: inline;
+    padding: 10px;
+}
+li:hover{
+    color: rgb(242, 242, 242);
+}
+
+h3{
+    display: inline;
+    background-color: #cdb4db;
+    
+    text-indent: -13px;
+   
+}
+.this {
+    background-color: #cdb4db;
+    word-spacing: 2px;
+    line-height: 60px;
+}
+
+
+
+.Art {
+    display: block;
+    .one {
+        background-color: #e9c46a;
+    }
+
+    .two {
+        background-color: #e9c46a;
+    }
+
+    line-height: 60px;
+}
+
+.tb {
+    border: black;
+    border-width: 20%;
+    border-style: dotted;
+    background-color: #264653;
+
+
+}
+
+.page{
+    background-color: aquamarine;
+    padding: 15px;
+}
+
+footer{
+    display: inline-block;
+    #coco{
+        width: 40%;
+    }
+    #pepsi{
+        width: 50%;
+    }
+}

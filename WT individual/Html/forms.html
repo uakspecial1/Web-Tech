@@ -1,0 +1,104 @@
+<!-- FROMS ARE USED TO TAKE INPUTS 
+It is consist of 2 things Front End and the Back End-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+</head>
+
+<body>
+    <h1>FORMS IN HTML</h1>
+    <hr>
+
+    <form action="">
+        <!-- All the input fields goes into form 
+                                  action attribute tell's what to do after a user click submit and where should the data be stored (used for backend) -->
+
+        <!--Input field which contains text type of input from an user Bydefault it can store upto 30 words-->
+
+        <!--    In-Line element:- Element/text which does not take entire line
+                                                                 for ex :-
+                                                                        Name <input type="text">    // Here Name is not written in any tag 
+
+                                          Block element : - Elements which takes/blocks an entire line 
+                                                                 for ex :-
+                                                                       <p> Name :- </p> <input type"text">    // Name written in p tag -->
+
+
+        <img width="50%" src="C:\Users\Utkar\OneDrive\Desktop\test jupyterlab\InputTypes.png" alt="Input types"><br><br>
+
+        <label for="name">First Name :-</label> <input id="name" type="text" value="Your name here">
+        <!--value attribut will display the default text-->
+        <label for="sec">Second Name:-</label><input id="sec" type="text"> <br><br> <!--for text input-->
+        <label for="num">Number:- </label> <input id="num" type="number"> <!--for numerical input-->
+        <label for="email">Email :-</label> <input id="email" type="email"><br><br> <!--for entering email-->
+        <label for="age">Age :-</label> <input id="age" type="number">
+        <label for="dob">D.O.B :-</label> <input id="dob" type="date"><br><br> <!--for entering date-->
+        <label for="pass">Password :- </label><input id="pass" type="password"><br><br>
+
+        <hr>
+
+        <!-- "name" attribute is used to select one particular option from many options while using radio buttons
+      add this name attribute to every input which you want to group together and it should be same for every input field
+      also used when submit button is clicked, Name of whatever field/value which is going through is defined using "name" attribute    -->
+
+        <!--"id" keyword in input and "for" keyword in label are used to bind eachother[label & input] which helps when we click on texts to redirect instead of clicking radio buttons-->
+
+        <p>ENTER YOUR SIZE :-</p>
+        <input id="small" name="size" type="radio" value="small"> <label for="small">Small</label>
+        <!--name To select one from multiple options -->
+        <input id="medium" type="radio" name="size" value="medium"> <label for="medium">Medium</label>
+        <!--"value" defines what value is given to name -->
+        <input id="large" type="radio" name="size" value="large"> <label for="large">Large</label>
+        <!--id should be same -->
+        <hr>
+
+
+        <label for="color">Pick Your COLOR :-</label><input type="color" name="pants" id="color"><br><br>
+        <!--To pick a color-->
+        <label for="pant">MEN Formals</label><input type="checkbox" name="pants" id="pant"> <br> <!--for checkbox-->
+
+        <label for="reset"></label><input type="reset" id="reset"> <!--resets the entire form-->
+
+        <!--"submit" checks the action keyword if theres a location of any file then it stores all data in that file else it checks if the form is filled properly-->
+        <label for="submit"></label><input type="submit" id="submit">
+        <hr>
+
+
+        <!-- "select" keyword is used for drop down list and "option" keyword used to mention those options in drop list-->
+
+        <label for="t">Choose T-shirts :-</label>
+        <select name="t-shirts" id="t">
+            <option value="Long neck">Long Neck</option>
+            <option value="Chinese Collar">Collar</option>
+            <option value="POLO">polo</option>
+            <option value="Oversize">over</option>
+        </select><br><br>
+
+        <!-- "textarea" is a keyword which is used when we want to enter a big text [Customizable] -->
+
+        <label for="me">About Myself</label><br>
+        <textarea name="Utkarsh" id="me" cols="30" rows="10"></textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+
+</body>
+
+</html>

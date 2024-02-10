@@ -1,0 +1,19 @@
+PEXELS :- Free High Quality Photos
+
+
+Favicon.io  :- Web icons
+
+
+WebAim :- Contrast Checkers 
+
+
+Coolers :- Color pallete generator
+
+fonts.google.com :-  [Method 1] To add new font families,scroll down, copy links on fonts.google.com and add inside head in HTML
+                    Also copy paste the font family mentioned there in CSS file
+
+                    [Method 2] Import option is available choose that and paste it inside CSS file on top just remove the style 
+                    Also copy paste the font family mentioned inside css 
+
+
+                    The fonts which do not have upper quotes are WEB SAFE FONTS which will be present all the time in our browser

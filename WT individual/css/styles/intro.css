@@ -1,0 +1,131 @@
+
+/* LINK THE CSS FILE WITH HTML BEFORE, IN THE HEAD TAG */
+
+/* IN INTERNAL CSS IF YOU WRITE TWO THINGS THEN LOWER TEXT WILL HAVE HIGHER PRIORITY  */
+
+/* IN EXTERNAL CSS HIGHEST PRIORITY WILL BE GIVEN TO UPPER TEXT */
+
+/* IN-LINE CSS HOLDING [HIGHEST PRIORITY] OVER INTERNAL AND EXTERNAL CSS :- 
+    WE CAN GIVE SELF STYLE TO EVERY ELEMENT  
+    NOT RECOMMENDED PRACTISE, ONLY USE FOR ONLY QUICK CHECKING */
+
+/* WHILE CASCADING i.e TWO SAME ELEMENTS ARE CALLED WITH DIFFERENT PROPERTIES 
+                        
+                    for ex : - #first{
+                                color:red;               // First RED will be assigned to the class
+                                 } 
+
+                               #first {
+                                color:pink;           // Lower text will hold more priority So PINK will be choosen
+                               }
+                        
+                        
+                        
+                        */
+/* "!important" is used when we want something to definitely showcase no matter what 
+[Dont use unless extremely needed ] */
+
+/*         
+
+        SELECTORS IN HTML :-
+
+
+1] Element selector :- selects html elements based on element name 
+
+2] Id selector :- Uses id attribute element to select a specific element 
+                  [The id of an element is unique withn a page so the id selector is used to select one unique element]
+
+3] Class selector :- selects HTML elements with a specific class attribute 
+                     [elements can have more than one class]
+                     [Class can't start with a number]
+ 
+
+4] Universal Selector[*] : - using * we can access every element present in our html and can be given styling at same time
+                             (Basically we are forcing a property on every element using this selector )           
+                             
+5] Grouping Selector : - We can give property to different elements at same time                   
+                             
+6] Nested Selector[>] :- Accesing one element inside another 
+                            
+
+       
+
+PRIORITY LEVELS OF SELECTORS : -
+        
+        1. id SELECTOR
+        2. class SELECTOR
+        3. element SELECTOR
+
+
+       
+       
+ PSEUDO SELECTORS : - 
+
+        1] :hover : - select's the element and change its state when you will hover on it
+
+                            for ex : - p:hover{
+                                        font-family:verdana;  }           
+                                        
+                             // If different font is shown for a paragraph and if u hover on it then it will be shown in verdana style
+                                        
+
+
+*/
+
+
+
+
+/* THIS IS EXTERNAL CSS WHERE YOU WRITE DRECTLY THE THINGS YOU WANT TO MODIFY */
+
+#uk{
+    
+    border-radius: 50%;
+}
+
+*{
+    font-style: italic;
+}
+
+    /*body tag defines entire layout*/
+
+body {
+    background-color: rgb(224, 171, 171);
+}
+
+#but:hover{
+    background-color: brown;
+
+}
+
+p:hover {
+    color: rgb(0, 0, 0);
+    font-family:sans-serif;
+
+}
+
+/* Grouping selector is used to give same property to different elements at same time instead of writing it individually */
+
+#first,#sec {
+    background-color: rgb(186, 158, 74);
+}
+
+/* Nested Selector [>] denoted by greater than sign help's to access an element inside another element 
+Nesting can be continuos for ex : - #first>p>ol and like wise */
+
+#first>p{
+    background-color: cornflowerblue;
+    
+}
+
+
+
+/*         Accesing class using dot(.)        */
+
+.purple {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.highlight {
+    background-color: rgb(31, 168, 24);
+    font-weight: bolder;
+}
