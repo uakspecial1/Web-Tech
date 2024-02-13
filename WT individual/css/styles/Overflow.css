@@ -1,0 +1,112 @@
+/* OVERFLOW is a property which controls what happens to a content [Could be a text/img] which is too big to fit into an area
+
+        OverFlow Values : -     
+                                1. visible : - WHEN ENABLE THEN CONTENT WILLL BE SEEN EVEN AFTER OVERFLOW
+                                2. hidden : - CONTENT WONT BE SEEN AND WE CANT SCROLL IN IT
+                                3. scroll : - GIVES YOU AN OPTION OF SCROLLING WITH VERTICAL/HORIZONTAL SCROLL BARS
+                                4. auto : - WILL AUTOMATICALLY SELECT THE NEEDED SCROLL BARS
+
+
+        BY-DEFAULT VISIBLE PROPERTY IS ALREADY INHERITED  
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+header{
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+.container1{
+    margin: 100px;
+    background-color:darkgray;
+    width: 250px;
+    height: 300px;
+    border:2px solid black;
+    overflow: hidden;                                /*hiddden will not show any content if it is going out of container size*/
+}
+.container2{
+    margin: 100px;
+    position: absolute;
+    top: 40px; left: 300px;
+    background-color:darkgray;
+    width: 250px;
+    height: 300px;
+    border:2px solid black;
+    overflow: visible;                             /*visible will show everything even if its going out of box */
+
+}
+.container3{
+    margin: 100px;
+    position: absolute;
+    top: 40px; left: 600px;
+    background-color:darkgray;
+    width: 250px;
+    height: 300px;
+    border:2px solid black;
+    overflow: scroll;                /*scroll will help you show all of the content by providig you with Horizontal as well as Vertical scroll bars*/
+
+}
+
+.container4{
+    margin: 100px;
+    position: absolute;
+    top: 450px; 
+    background-color:darkgray;
+    width: 250px;
+    height: 300px;
+    border:2px solid black;
+    overflow: auto;                  /*auto will give you scroll option with ONLY needed scroll bars */
+
+}
+
+
+
+/* FLOAT IN CSS :-
+                    SPECIFIES HOW AN ELEMENT SHOULD FLOAT/move 
+
+   FLOAT VALUES : - LEFT :- will send your img to left 
+                    RIGHT : - will send your img to right
+                    NONE : - Will not float anywhere
+                    INHERIT : - Adapt the floating property of parent
+
+*/
+.container5{
+    width: 600px;
+    height: 600px;
+    background-color: rgb(137, 109, 76);
+    position: absolute;
+    left: 800px;
+                                        
+}
+.img1{
+    float: left;
+}
+.img2{
+    float:right;
+  
+}
+
+/* clear property defines what elements can float besides the cleared element and on which side 
+
+CLEAR values : - left : -  Clears the content flow on left side
+                 right : - Clears the content flow on right side
+                 none :-  Wont clear anything
+                 inherit : - Will adapt the parents property
+                 both : - Clears the content flow on both the right and left side
+
+*/
+
+.p1{
+    clear: right;  /*The paragraph is not floating with the image but floating with left side
+                    It will automatically remove the text present in between of images*/ 
+}
+
+/* USE FLOAT AND CLEAR ONLY FOR ALIGNMENT OF IMAGE AND TEXT */
+/* FOR LAYOUT FORMATTING USE DISPLAY PROPERTIES SUCH AS "GRID","FLEX"  */
