@@ -1,0 +1,267 @@
+/* To use Flex we need a CONTAINER/Parent and some children in that container
+
+    2 Types of Property :- 
+                            1.FLex Container : -  Flex Container becames flexible by setting display property to flex
+                                                        1.flex-direction
+                                                        2.flex-wrap
+
+                                                        3.flex-flow : - IT'S A SHORTHAND FOR FLEX-WRAP/DIRECTION
+                                                                       HERE WE CAN DEFINE PROPERTY OF BOTH AT ONCE 
+
+                                                        4.justify-content :- Aligning against [ MAIN AXIS ] / Horizontal plane
+
+                                                        5.align-items:- Aligning against  [ CROSS AXIS ] / Vertical plane
+                                                                    1]center
+                                                                    2]flex-end
+                                                                    3]felx-start
+                                                                    4]end
+
+                                                        6.align-content :- TO BRIDGE THE GAP BETWEEN ROWS WHEN SHRINKING
+                           
+                           
+                             2.Flex Children : - The direct child elements of flex container automatically becomes flexible[flex] items
+                                                       
+                                                    YOU CAN MAKE THE INDIVIDUAL CHILD BEHAVE SEPERATELY
+                                                        1.order
+                                                        2.flex-grow
+                                                        3.flex-shrink
+                                                        4.flex-basis
+                                                        5.flex
+                                                        6.align-self
+
+
+
+
+
+
+
+
+[display=flex WILL MAKE OUR CONTAINER FLEX  and all children in it will become flex children]
+
+            
+
+
+
+
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;                       /*So that our border should be included in Container calculations */
+}
+
+body{
+    background-color: bisque;
+}
+
+header>h1{
+    color: black;
+    text-align: center;
+    background-color: azure;
+}
+.container{
+    width: 600px;
+    height: 400px;
+    background-color: cadetblue;
+    margin: 100px;
+    position: absolute;
+    left: 350px;
+    padding: 20px;
+    border: 5px dashed black;
+
+    display: flex;                              /*FLEX IS RELATED TO MAIN AXIS NOT THE CROSS AXIS*/
+    
+    flex-direction:row;              /*If u want to FLEX on Cross Axis then use flex-direction and You may
+                                         choose to do it in either 
+                                         1.column 
+                                         2.row 
+                                         3.row-reverse [THE ITEM OF FLEX WILL START FILLING FROM RIGHT]
+                                         4.column-reverse  [THIS WILL FILL COLUMN BUT FROM DOWN DIRECTION]*/
+    
+    flex-flow: wrap column;
+   
+    justify-content: space-around;   /* space-around Brings more space around your CONTENT*/
+
+
+}                                         
+
+
+
+
+.box{
+  
+  
+    background-color: brown;
+    border: 2px solid black;
+    padding: 2px;
+    
+}
+
+
+/* If you want the content not to be smaller when you shrink the page 
+But to come one after other on its own then we can use flex-wrap */
+
+.container2{
+    width: 600px;
+    height: 400px;
+    background-color: cadetblue;
+    margin: 100px;
+    position: absolute;
+    left: 350px; top: 500px;
+    padding: 20px;
+    border: 5px dashed black;
+
+    display: flex; 
+
+    flex-wrap: wrap;                                   /*Flex wrapping
+                                                            Bydefault its No-wrap
+                                                            reverse-wrap : - wrapping in reverse order*/
+
+
+    /* USE "gap:;" for gapping between container and boxes */
+
+
+    column-gap: 30px;           /*gapping between columns*/
+    row-gap: 30px;             /*gapping between rows*/
+
+    justify-content: space-between;          /*No space on LEFT and RIGHT side only in between */
+
+/* 
+justify-content: flex-start;      // Bydefault container starting 
+justify-content: flex-end;        // To push the element at end around main axis 
+justify-content: center;         // All elements will be in center
+*/
+
+
+align-content:space-evenly;   /*We can define space here*/   
+
+
+
+}
+
+/* IF YOU WANT TO ALIGN CHILDREN AROUND CROSS AXIS THEN USE 
+align-items 
+
+THERE'S A DEFAULT VALUE OF align-items CALLED AS stretch DUE TO WHICH ALL THE ELEMENTS ARE STRETCHED
+All the values such as flex-start/end/center/ can be used by align-items
+*/
+
+
+
+.sq{
+  
+    background-color: brown;
+    border: 2px solid black;
+    padding: 20px;
+    
+}
+
+
+
+/* The children of flex also have some properties.
+This properties you can only define to children, We can make behave each individual children Differently
+*/
+
+.container3{
+    width: 600px;
+    height: 400px;
+    background-color: cadetblue;
+    margin: 100px;
+    position: absolute;
+    left: 350px; top: 1000px;
+    padding: 20px;
+    border: 5px dashed black;
+
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+
+.boxy{
+    background-color: brown;
+    border: 2px solid black;
+    padding: 2px;
+
+}
+
+/* order property: -  Decides the sequencing of the element 
+                        ByDefault value of order is 0 */
+
+
+#box-1{
+
+    order: 2;
+/* box-1 has became the highest order box thats why it has shifted towards the right */
+    
+}
+
+#box-3{
+    order: 3;
+
+    /* If we gave a HIGHER order than all other order defiined elements then it will be of the Highest order */
+}
+
+
+
+/* flex-grow property : - You can ask any particular child to grow by flex in different way 
+                                    It will take whatever the space which was left
+                                    ByDefault its 0  */
+
+#box-5{
+    
+    order: 4;
+    flex-grow: 1;
+}
+
+#box-4{
+    flex-grow: 2;
+/* Growing more faster than box-5 due to bigger flex-grow */
+}
+
+
+/* flex-shrink property : - Bydefault its 1
+                                We can define which element will shrink first
+                                If want to make it shrink more rapidly then give a Bigger no */
+
+
+#box-2{
+    flex-shrink: 2;  
+                
+}
+
+
+/* flex-basis property : - We can define the INITIAL WIDTH for child around the main axis with help of flex basis */
+
+#box-6{
+
+    flex-basis:50px;                /*box-6 has initial width of 50px*/
+    order: 6;
+}
+
+
+/* flex property :- Its a shorthand property for flex-grow/flex-shrink/flex-basis
+TO DEFINE ALL THESE 3 PROPERTIES AT ONCE THEN USE FLEX*/
+
+#box-7{
+
+    flex: 1 0 100px;          /*grow shrink basis*/
+}
+
+
+/* align-self property : - It will seperately align itself on its own against Cross-Axis 
+                                    1]strecth: Will accquired entire space 
+                                    2]flex-start
+                                    3]felx-end
+                                    4]auto
+                                    5]normal
+                                    6]self-start      */
+                                
+#box-8{
+    align-self:stretch;
+    flex: 0 0 100px;
+}
