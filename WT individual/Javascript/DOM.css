@@ -1,0 +1,26 @@
+.container{
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+    background-color:cadetblue;
+    border: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.box{
+    width: 120px;
+    height: 200px;
+    background-color: aliceblue;
+    align-items:space-between;
+    padding: 10px;
+    
+}
+
+.round-border{
+    border-radius: 10%;
+    border: 5px solid black;
+}
