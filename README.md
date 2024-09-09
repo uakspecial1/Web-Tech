@@ -1,5 +1,5 @@
 # Web-Tech
-A Web development series consisting of HTML, CSS, and, later, JavaScript will be added.
+A web development series including HTML, CSS, and JavaScript resources added solely for educational purposes.
 
 Welcome to the Web Development Materials Repository! This repository is dedicated to providing a comprehensive collection of materials for web development enthusiasts, beginners, and professionals alike. Whether you're just starting your journey in web development or looking to expand your skills, you'll find a wealth of resources here.
 
