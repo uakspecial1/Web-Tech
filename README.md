@@ -3,6 +3,8 @@ A web development series including HTML, CSS, and JavaScript resources added sol
 
 Welcome to the Web Development Materials Repository! This repository is dedicated to providing a comprehensive collection of materials for web development enthusiasts, beginners, and professionals alike. Whether you're just starting your journey in web development or looking to expand your skills, you'll find a wealth of resources here.
 
+<img src="https://tse1.mm.bing.net/th?id=OIP.uvIHqDmq9JAdv-Yu5iyYOgHaDs&pid=Api&P=0&h=180" alt="display picture">
+
 ## Folder Structure
 
 - **HTML**: Contains HTML files and resources for building the structure of web pages.
